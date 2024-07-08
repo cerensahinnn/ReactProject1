@@ -50,12 +50,20 @@ const Login = () => {
   }
 
   return (
-    <Container>
+    <Container
+      sx={{
+        display: "flex",
+        width: "100vw",
+        height: "100vh",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Box
         sx={{
           width: "600px",
           height: "500px",
-          backgroundColor: "red",
+          // backgroundColor: "red",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -74,11 +82,12 @@ const Login = () => {
             fontFamily: "Arial",
           }}
         >
-          Sign In
+          Login
         </Typography>
         <TextField
           required
           id="outlined-required"
+          fullWidth
           label="Email"
           placeholder="Email"
           value={mail}
@@ -87,6 +96,7 @@ const Login = () => {
         <TextField
           required
           id="outlined-required"
+          fullWidth
           label="Password"
           placeholder="Password"
           value={password}
